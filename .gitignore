@@ -1,1 +1,19 @@
+node_modules/
+.cache/
+public/
 .env
+*.log
+
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+package-lock.json
+
+# Build directory
+/public
+.DS_Store
+
+.vscode/
+
+.playwright-mcp
