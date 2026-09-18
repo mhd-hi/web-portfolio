@@ -1,7 +1,15 @@
 import React from 'react';
+import { content } from '../config';
+import { SocialLinks } from './social-links';
 
 export const Footer = () => (
   <footer>
-    <p>Designed from <a href="https://github.com/benjaminkostiuk/benjaminkostiuk.github.io">Benjamin Kostiuk&apos;s portfolio</a>, based on <a href="https://brittanychiang.com">Brittany Chiang&apos;s v4</a>.</p>
+    <SocialLinks className="footer-social" />
+    <p>
+      <a href={content.footer.hostedUrl} target="_blank" rel="noopener noreferrer">{content.footer.hostedLabel}</a>
+    </p>
+    <p>
+      <a href={content.footer.adaptedUrl} target="_blank" rel="noopener noreferrer">{content.footer.adaptedLabel}</a>
+    </p>
   </footer>
 );

@@ -1,12 +1,11 @@
 import React from 'react';
-import { site } from '../../config';
+import { content } from '../../config';
 
 export const Contact = () => (
   <section id="contact" className="section contact">
-    <p className="eyebrow">04. What&apos;s Next?</p>
-    <h2>Get In Touch</h2>
-    <p>I&apos;m always open to discussing software opportunities and new projects.</p>
-    <a className="button" href={`mailto:${site.email}`}>{site.email}</a>
-    <a className="phone" href={`tel:${site.phone.replaceAll('-', '')}`}>{site.phone}</a>
+    <p className="eyebrow">{content.contact.eyebrow}</p>
+    <h2>{content.contact.title}</h2>
+    {content.contact.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+    <a className="button" href={`mailto:${content.site.email}`}>{content.contact.actionLabel}</a>
   </section>
 );

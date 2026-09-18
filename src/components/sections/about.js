@@ -1,22 +1,35 @@
 import React from 'react';
-import { site } from '../../config';
+import { content } from '../../config';
 
 export const About = () => (
   <section id="about" className="section about">
-    <h2><span>01.</span> About Me</h2>
+    <h2>{content.about.title}</h2>
     <div className="about-grid">
-      <div>
-        <p>I&apos;m {site.name}, a full-stack and software developer based in Montreal.</p>
-        <p>I&apos;m currently studying software engineering at Ecole de technologie superieure (ETS), and have gained industry experience through Sherweb, Civalgo, and Groupe IDF.</p>
-        <p>My background also includes studies at College Montmorency.</p>
+      <div className="about-copy">
+        <p>
+          {content.about.introduction.before}
+          <a href={content.about.introduction.link} target="_blank" rel="noopener noreferrer">
+            {content.about.introduction.linkLabel}
+          </a>
+          {content.about.introduction.between}
+          <a href={content.about.introduction.schoolLink} target="_blank" rel="noopener noreferrer">
+            {content.about.introduction.schoolLabel}
+          </a>
+          {content.about.introduction.after}
+        </p>
+        {content.about.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+        <p>{content.about.technologyIntro}</p>
+        <ul className="technology-list">
+          {content.about.technologies.map(technology => <li key={technology}>{technology}</li>)}
+        </ul>
       </div>
-      <aside className="education" aria-label="Education">
-        <p className="eyebrow">Education</p>
-        <strong>Ecole de technologie superieure</strong>
-        <span>Software Engineering, 2022 - 2027</span>
-        <strong>College Montmorency</strong>
-        <span>2022</span>
-      </aside>
+      <div className="portrait-frame">
+        {content.about.imageSrc ? (
+          <img src={content.about.imageSrc} alt={content.about.imageAlt} width="800" height="800" loading="lazy" decoding="async" />
+        ) : (
+          <span aria-label={content.about.imageAlt}>{content.about.imagePlaceholder}</span>
+        )}
+      </div>
     </div>
   </section>
 );
