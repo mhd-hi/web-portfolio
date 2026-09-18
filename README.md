@@ -7,8 +7,8 @@ All portfolio text and links live in [`src/config.js`](src/config.js). Edit the 
 ## Development
 
 ```sh
-npm install
-npm run develop
+yarn install
+yarn develop
 ```
 
 ## GitHub Pages
