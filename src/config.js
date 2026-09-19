@@ -106,7 +106,7 @@ export const content = {
         name: 'PlanifETS',
         logo: { prefix: 'Planif', accent: 'ETS' },
         description: 'A course-planning platform for ÉTS students. It combines university data from PDFs and APIs with real-time scheduling, and includes a RAG-powered chatbot that uses semantic embeddings to recommend courses based on interests and academic goals.',
-        technologies: ['Next.js', 'NestJS', 'RAG', 'Embeddings', 'Docker', 'Kubernetes'],
+        technologies: ['Next.js', 'NestJS', 'Prisma', 'Postgres', 'RAG', 'Embeddings', 'Docker', 'Kubernetes'],
         url: 'https://planifets.clubapplets.ca/',
         githubUrl: 'https://github.com/ApplETS/planifETS-frontend',
         links: [
@@ -133,7 +133,7 @@ export const content = {
         logoWidth: 512,
         logoHeight: 512,
         description: 'A personal productivity app that turns unstructured thoughts into scheduled tasks, with a tool-enabled chatbot for planning in natural language.',
-        technologies: ['AI tools', 'TypeScript', 'Scheduling'],
+        technologies: ['AI tools', 'TypeScript', 'Next.js', 'Drizzle', 'MCP'],
         url: 'https://secondbrainets.mohamedhi.com/',
         githubUrl: 'https://github.com/mhd-hi/SecondBrain',
       },
@@ -160,7 +160,7 @@ export const content = {
 
   footer: {
     hostedLabel: 'Hosted on GitHub',
-    hostedUrl: 'https://pages.github.com/',
+    hostedUrl: 'https://github.com/mhd-hi/web-portfolio',
     adaptedLabel: "Adapted from Brittany Chiang's v4 design",
     adaptedUrl: 'https://github.com/bchiang7/v4',
   },
